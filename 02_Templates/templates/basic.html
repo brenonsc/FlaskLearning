@@ -6,10 +6,24 @@
     <title>Document</title>
   </head>
   <body>
+    {% if user_logged_in %}
     <h1>Bem-vindo ao site, {{nome.capitalize()}}!</h1>
     <h2>{{letras[2:]}}</h2>
     <h2>{{pup_dict['pup_name']}}</h2>
+    <ul>
+      {% for pup in puppies %}
+      <li><h3>{{pup}}</h3></li>
+      {% endfor %}
+    </ul>
+    {% if 'Rufus' in puppies %}
+    <p>Rufus é um bom garoto!</p>
+    {% else %}
+    <p>Rufus não é um bom garoto!</p>
+    {% endif %}
     <h2>Aqui está a imagem do melhor RPG de todos os tempos:</h2>
     <img src="../static/chrono.jpeg" alt="Imagem de Chrono Trigger" />
+    {% else %}
+    <h1>Você não está logado!</h1>
+    {% endif %}
   </body>
 </html>
