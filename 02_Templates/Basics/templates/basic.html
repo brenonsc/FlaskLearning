@@ -7,7 +7,7 @@
   </head>
   <body>
     {% if user_logged_in %}
-    <h1>Bem-vindo ao site, {{nome.capitalize()}}!</h1>
+    <h1>Bem-vindo ao site, {{nome | capitalize}}!</h1>
     <h2>{{letras[2:]}}</h2>
     <h2>{{pup_dict['pup_name']}}</h2>
     <ul>
