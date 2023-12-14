@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% block content %}
+<div class="jumbotron">
+  <h1>Bem-vindo à página de cadastro!</h1>
+  <p>Preencha o formulário a seguir:</p>
+  <form action="{{url_for('thank_you')}}">
+    <label for="name">Nome:</label>
+    <input type="text" name="first" />
+    <label for="last">Sobrenome:</label>
+    <input type="text" name="last" />
+    <input type="submit" class="btn btn-primary" value="Enviar" />
+  </form>
+</div>
+{% endblock %}
